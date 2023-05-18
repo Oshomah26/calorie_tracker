@@ -5,8 +5,12 @@ class CalorieTracker {
         this._meals = [];
         this._workouts = [];
         
+        // You want it to display when the page loads
         this._displayCaloriesLimit();
         this._displayCaloriesTotal();
+        this._displayCaloriesConsumed();
+        this._displayCaloriesBurned();
+        this._displayCaloriesRemaining();
     }
     // Public methods
 
@@ -34,8 +38,35 @@ class CalorieTracker {
         CaloriesLimitEl.innerHTML = this._calorieLimit;
     }
 
+    _displayCaloriesConsumed(){
+        const caloriesConsumedEl = document.getElementById('calories-consumed');
+        const consumed = this._meals.reduce((total, meal) => total + meal.calories, 0);
+
+        caloriesConsumedEl.innerHTML = consumed;
+
+    }
+
+    _displayCaloriesBurned(){
+        const caloriesBurnedEl = document.getElementById('calories-burned');
+        const burned = this._workouts.reduce((total, workout) => total + workout.calories, 0);
+
+        caloriesBurnedEl.innerHTML = burned;
+
+    }
+
+    _displayCaloriesRemaining() {
+        const caloriesRemainingEl = document.getElementById('calories-remaining');
+
+        const remaining = this._calorieLimit - this._totalCalories; 
+
+        caloriesRemainingEl.innerHTML = remaining;
+    }
+
     _render() {
         this._displayCaloriesTotal();
+        this._displayCaloriesConsumed();
+        this._displayCaloriesBurned();
+        this._displayCaloriesRemaining();
     }
 }
 
