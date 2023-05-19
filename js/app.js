@@ -60,14 +60,20 @@ class CalorieTracker {
 
         const remaining = this._calorieLimit - this._totalCalories; 
 
+        const progressEl = document.getElementById('calorie-progress');
+
         caloriesRemainingEl.innerHTML = remaining;
 
         if(remaining <= 0) {
             caloriesRemainingEl.parentElement.parentElement.classList.remove('bg-light');
             caloriesRemainingEl.parentElement.parentElement.classList.add('bg-danger');
+            progressEl.classList.remove('bg-success');
+            progressEl.classList.add('bg-danger');
         } else {
             caloriesRemainingEl.parentElement.parentElement.classList.remove('bg-danger');
             caloriesRemainingEl.parentElement.parentElement.classList.add('bg-light');
+            progressEl.classList.remove('bg-danger');
+            progressEl.classList.add('bg-success');
         }
     }
 
@@ -109,7 +115,7 @@ const tracker = new CalorieTracker();
 const breakfast = new Meal('Breakfast', 400);
 tracker.addMeal(breakfast);
 
-const lunch = new Meal('lunch', 2500);
+const lunch = new Meal('lunch', 500);
 tracker.addMeal(lunch);
 
 const supper = new Meal('lunch', 400);
