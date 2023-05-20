@@ -110,24 +110,56 @@ class Workout {
     }
 }
 
-const tracker = new CalorieTracker();
+class App {
+    constructor() {
+        this._tracker = new CalorieTracker();
+        document.getElementById('meal-form').addEventListener('submit', this._newMeal.bind(this));
+    }
 
-const breakfast = new Meal('Breakfast', 400);
-tracker.addMeal(breakfast);
+    _newMeal(e){
+        e.preventDefault();
 
-const lunch = new Meal('lunch', 500);
-tracker.addMeal(lunch);
+       const name = document.getElementById('meal-name');
+       const calories = document.getElementById('meal-calories');
 
-const supper = new Meal('lunch', 400);
-tracker.addMeal(supper);
+       // Validate input
+       if(name.value === '' || calories.value === '') {
+        alert('Please fill in all fields');
+        return;
+       }
+
+       const meal = new Meal(name.value, calories.value);
+
+       this._tracker.addMeal(meal);
+
+       name.value = '';
+       calories.value = '';
+    }
+}
+
+const app = new App;
 
 
 
 
-const run = new Workout('Morning Run', 250);
-tracker.addWorkout(run);
+// const tracker = new CalorieTracker();
+
+// const breakfast = new Meal('Breakfast', 400);
+// tracker.addMeal(breakfast);
+
+// const lunch = new Meal('lunch', 500);
+// tracker.addMeal(lunch);
+
+// const supper = new Meal('lunch', 400);
+// tracker.addMeal(supper);
 
 
-console.log(tracker._meals);
-console.log(tracker._workouts);
-console.log(tracker._calorieLimit);
+
+
+// const run = new Workout('Morning Run', 250);
+// tracker.addWorkout(run);
+
+
+// console.log(tracker._meals);
+// console.log(tracker._workouts);
+// console.log(tracker._calorieLimit);
