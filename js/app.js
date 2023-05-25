@@ -1,7 +1,7 @@
 class CalorieTracker {
     constructor(){
         this._calorieLimit = Storage.getCalorieLimit();
-        this._totalCalories = Storage.updateTotalCalories(0);
+        this._totalCalories = Storage.getTotalCalories(0);
         this._meals = [];
         this._workouts = [];
         
@@ -216,7 +216,7 @@ class Storage {
         localStorage.setItem('calorieLimit', calorieLimit)
     } 
 
-    static getCalorieLimit(defaultCalories = 0) {
+    static getTotalCalories(defaultCalories = 0) {
         let totalCalories;
         if (localStorage.getItem('totalCalories') === null){
             totalCalories = defaultCalories;
