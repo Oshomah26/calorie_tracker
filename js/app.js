@@ -414,30 +414,3 @@ class App {
 }
 
 const app = new App;
-
-
-
-
-
-
-// const tracker = new CalorieTracker();
-
-// const breakfast = new Meal('Breakfast', 400);
-// tracker.addMeal(breakfast);
-
-// const lunch = new Meal('lunch', 500);
-// tracker.addMeal(lunch);
-
-// const supper = new Meal('lunch', 400);
-// tracker.addMeal(supper);
-
-
-
-
-// const run = new Workout('Morning Run', 250);
-// tracker.addWorkout(run);
-
-
-// console.log(tracker._meals);
-// console.log(tracker._workouts);
-// console.log(tracker._calorieLimit);
