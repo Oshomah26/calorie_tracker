@@ -1,3 +1,5 @@
+// Class 1
+
 class CalorieTracker {
     constructor(){
         this._calorieLimit = Storage.getCalorieLimit();
@@ -198,6 +200,9 @@ class CalorieTracker {
     }
 }
 
+
+// Class 2 
+
 class Meal {
     constructor(name, calories) {
         this.id = Math.random().toString(16).slice(2)
@@ -206,6 +211,8 @@ class Meal {
     }
 }
 
+// Class 3
+
 class Workout {
     constructor(name, calories) {
         this.id = Math.random().toString(16).slice(2)
@@ -213,6 +220,8 @@ class Workout {
         this.calories = calories;
     }
 }
+
+// Class 4
 
 class Storage {
     static getCalorieLimit(defaultLimit = 2000) {
@@ -307,6 +316,8 @@ class Storage {
     }
 
 }
+
+// Class 5
 
 class App {
     constructor() {
