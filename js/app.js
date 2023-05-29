@@ -211,7 +211,7 @@ class Meal {
     }
 }
 
-// Class 3
+// Class 3 - Workout class
 
 class Workout {
     constructor(name, calories) {
@@ -221,7 +221,7 @@ class Workout {
     }
 }
 
-// Class 4
+// Class 4 - Storage class 
 
 class Storage {
     static getCalorieLimit(defaultLimit = 2000) {
@@ -317,7 +317,7 @@ class Storage {
 
 }
 
-// Class 5
+// Class 5 - App class 
 
 class App {
     constructor() {
