@@ -201,7 +201,7 @@ class CalorieTracker {
 }
 
 
-// Class 2 
+// Class 2 - Meal class that calculates how much calories a meal is in relation to the totalCalories
 
 class Meal {
     constructor(name, calories) {
@@ -317,7 +317,7 @@ class Storage {
 
 }
 
-// Class 5 - App class 
+// Class 5 - App class - This class displays what's in the ui
 
 class App {
     constructor() {
