@@ -1,4 +1,4 @@
-// Class 1
+// Class 1 - Main calorie tracker
 
 class CalorieTracker {
     constructor(){
