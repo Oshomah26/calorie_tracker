@@ -7,7 +7,7 @@ class CalorieTracker {
         this._meals = Storage.getMeals();
         this._workouts = Storage.getWorkouts();
         
-        // You want it to display when the page loads
+        // You want it to display when the page loads 
         this._displayCaloriesLimit();
         this._displayCaloriesTotal();
         this._displayCaloriesConsumed();
@@ -17,7 +17,7 @@ class CalorieTracker {
 
         document.getElementById('limit').value = this._calorieLimit;
     }
-    // Public methods
+    // Public methods hould do well
 
     addMeal(meal) {
         this._meals.push(meal);
@@ -424,6 +424,6 @@ class App {
     
 }
 
-// Initiate the app
+// Initiate the app 
 
 const app = new App;
