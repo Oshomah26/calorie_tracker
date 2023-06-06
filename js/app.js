@@ -17,7 +17,7 @@ class CalorieTracker {
 
         document.getElementById('limit').value = this._calorieLimit;
     }
-    
+
     // Public methods would do well
 
     addMeal(meal) {
@@ -424,6 +424,7 @@ class App {
 
     
 }
+
 
 // Initiate the app 
 
