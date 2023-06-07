@@ -426,6 +426,6 @@ class App {
 }
 
 
-// Initiate the app 
+// Initiate the app yo
 
 const app = new App;
