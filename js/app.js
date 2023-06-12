@@ -318,6 +318,7 @@ class Storage {
 
 }
 
+
 // Class 5 - App class - This class displays what's in the ui
 
 class App {
@@ -426,6 +427,6 @@ class App {
 }
 
 
-// Initiate the app 
+// Initiate the app
 
 const app = new App;
